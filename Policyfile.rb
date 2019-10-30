@@ -10,7 +10,7 @@ name 'python_recipe'
 default_source :supermarket
 
 # run_list: chef-client will run these recipes in the order specified.
-run_list 'python_recipe::default'
+run_list 'python_::default'
 
 # Specify a custom source for a single cookbook:
-cookbook 'python_recipe', path: '.'
+cookbook 'python', path: '.'

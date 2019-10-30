@@ -25,5 +25,13 @@ describe 'python_recipe::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+
+    it 'installs python' do
+      expect(chef_run).to install_package 'python'
+    end
+
+    it 'installs pip' do
+      expect(chef_run).to install_package 'python-pip'
+    end
   end
 end
