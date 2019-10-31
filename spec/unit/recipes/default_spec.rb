@@ -33,5 +33,9 @@ describe 'python_recipe::default' do
     it 'installs pip' do
       expect(chef_run).to install_package 'python-pip'
     end
+
+    it 'should install requests plugin using pip management' do
+      expect(chef_run).to run_execute ('install requests==2.3.0')
+    end
   end
 end
